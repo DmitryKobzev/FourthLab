@@ -23,7 +23,7 @@ public String getFromFile(String name,String name1){
         System.out.println(name1);
     }
     catch(IOException e){
-        System.out.println("Ошибка файла "+ e);
+        System.err.println("Ошибка файла "+ e);
     } finally {
         try{
             if(is != null){
@@ -31,7 +31,7 @@ public String getFromFile(String name,String name1){
             }
         }
         catch(IOException e){
-            System.out.println("Ошибка закрытия файла"+ e);
+            System.err.println("Ошибка закрытия файла"+ e);
         }
     }
     return name1;
@@ -47,7 +47,7 @@ public String getFromFile(String name,String name1){
         }
     }
         catch(IOException e){
-            System.out.println("Ошибка записи"+ e);
+            System.err.println("Ошибка записи"+ e);
         } finally {
         try{
             if(out != null){
@@ -55,7 +55,7 @@ public String getFromFile(String name,String name1){
             }
         }
         catch(IOException e){
-            System.out.println("Ошибка закрытия потока"+ e);
+            System.err.println("Ошибка закрытия потока"+ e);
         }
     }
     }
